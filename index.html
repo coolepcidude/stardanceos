@@ -9,13 +9,18 @@
             <p>Welcome to MemerOS. A fake OS all about Memer2000 (me).</p>
             <a href="https://www.youtube.com/@Memer2000-official">Youtube</a>
         </div>
-        <div style="position: absolute; width: 100%; left:0vh; top:0vh; display: flex; justify-content: end; background-color:rgba(20, 20, 20, 0.5); color: rgb(255, 255, 255);">
+        <div style="position: absolute; width: 100%; left:0vh; top:-0.5vh; display: flex; justify-content: end; background-color:rgba(20, 20, 20, 0.5); color: rgb(255, 255, 255);">
             <p style="margin: 8px;">
                 MemerOS
             </p>
-            <p style="margin: 8px;">
-                23/9/2026 11:41 PM
+            <p id="timeElement" style="margin: 8px;" id="currentTime">
+                Time
             </p>
         </div>
+        <script>
+            var currentTime = Date().toLocaleString();
+            var timeText = document.querySelector("#timeElement");
+            timeText.innerHTML = currentTime;
+        </script>
     </body>
 </html>
