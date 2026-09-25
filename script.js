@@ -2,40 +2,41 @@
 setInterval(function updateTime() {
                 document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
             }, 1000);
-dragElement(document.getElementById("welcome"));
-//dragging window script
+dragElement(document.getElementById("window"));
+
 function dragElement(element) {
-    var initialx = 0;
-    var initialy = 0;
-    var currentx = 0;
-    var currenty = 0;
+  var initialX = 0;
+  var initialY = 0;
+  var currentX = 0;
+  var currentY = 0;
+  if (document.getElementById(element.id + "header")) {
+    document.getElementById(element.id + "header").onmousedown = startDragging;
+  } else {
+    element.onmousedown = startDragging;
+  }
 
-    if (document.getElementById(element.id + "header")) {
-        document.getElementById(element.id + "header").onmousedown = startDragging;
-    } else {
-        element.onmousedown = startDragging;
-    }
-}
-
-function startDragging(e) {
+  function startDragging(e) {
     e = e || window.event;
     e.preventDefault();
     initialX = e.clientX;
     initialY = e.clientY;
     document.onmouseup = stopDragging;
     document.onmousemove = dragElement;
-}
+  }
 
-function dragElement(e) {
+  function dragElement(e) {
     e = e || window.event;
     e.preventDefault();
-    currentX = e.clientX;
-    currentY = e.clientY;
-    element.style.top = (element.offsetTop + currentY) + "px";
-    element.style.left = (element.offsetLeft + currentX) + "px";
-}
+    currentX = initialX - e.clientX;
+    currentY = initialY - e.clientY;
+    initialX = e.clientX;
+    initialY = e.clientY;
+    element.style.top = (element.offsetTop - currentY) + "px";
+    element.style.left = (element.offsetLeft - currentX) + "px";
+  }
 
-function stopDragging() {
+  function stopDragging() {
     document.onmouseup = null;
     document.onmousemove = null;
+  }
 }
