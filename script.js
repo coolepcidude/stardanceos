@@ -2,6 +2,7 @@
 setInterval(function updateTime() {
                 document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
             }, 1000);
+
 dragElement(document.getElementById("window"));
 
 function dragElement(element) {
