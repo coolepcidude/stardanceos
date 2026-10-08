@@ -58,12 +58,12 @@ function dragElement(element) {
   }
 }
 //welcome screen openning and closing
-var WelcomeScreen = document.querySelector("#Welcome")
+var WelcomeScreen = document.querySelector("window")
 function closeWindow(element) {
   element.style.display = "none"
 }
 function openWindow(element) {
-  element.style.display = "flex"
+  element.style.display = "block"
 }
 
 var welcomeScreenClose = document.querySelector("#windowclose");
@@ -76,7 +76,6 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(WelcomeScreen);
 });
-
 //App opening
 var selectedIcon = undefined;
 function selectIcon(element) {
@@ -84,7 +83,7 @@ function selectIcon(element) {
   selectedIcon = element
 }
 function deselectIcon(element) {
-  element.classlist.remove("selected");
+  element.classList.remove("selected");
   selectedIcon = undefined;
 }
 
@@ -93,6 +92,6 @@ function handleIconTap(element) {
     deselectIcon(element)
     openWindow(window)
   }else {
-    selectedIcon(element)
+    selectIcon(element)
   }
 }
