@@ -57,3 +57,32 @@ function dragElement(element) {
     document.onmousemove = null;
   }
 }
+var WelcomeScreen = document.querySelector("#Welcome")
+function closeWindow(element) {
+  element.style.display = "none"
+}
+function openWindow(element) {
+  element.style.display = "flex"
+}
+
+
+
+//App opening
+var selectedIcon = undefined;
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+}
+function deselectIcon(element) {
+  element.classlist.remove("selected");
+  selectedIcon = undefined;
+}
+
+function handleIconTap(element) {
+  if (element.classlist.contains("selected")) {
+    deselectIcon(element)
+    openWindow(window)
+  }else {
+    selectedIcon(element)
+  }
+}
