@@ -57,6 +57,7 @@ function dragElement(element) {
     document.onmousemove = null;
   }
 }
+//welcome screen openning and closing
 var WelcomeScreen = document.querySelector("#Welcome")
 function closeWindow(element) {
   element.style.display = "none"
@@ -65,7 +66,16 @@ function openWindow(element) {
   element.style.display = "flex"
 }
 
+var welcomeScreenClose = document.querySelector("#windowclose");
+var welcomeScreenOpen = document.querySelector("#windowopen");
 
+welcomeScreenClose.addEventListener("click", function() {
+  closeWindow(WelcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+  openWindow(WelcomeScreen);
+});
 
 //App opening
 var selectedIcon = undefined;

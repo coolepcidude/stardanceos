@@ -3,7 +3,10 @@
 <html>
     <body style="background-image: url(./Background.png); background-size: cover; font-family: monospace; text-align: center;">
         <div id="window" style="position: absolute; top: 50%; left: 50%; padding: 0px; border: solid; width: 256px; border-radius: 8px; border-color: rgb(50, 50, 50); background-color: rgb(20, 20, 20); color:rgb(255, 255, 255)">
-            <div id="windowheader" style="width:100%; height: 16px; background-color: rgb(0, 0, 0);"></div>
+            <div id="windowheader" style="width:100%; height: 16px; background-color: rgb(0, 0, 0); display: flex; justify-content: flex-end; align-items: flex-start;">
+                <p style="cursor: pointer; padding: 4px; position: relative; top: -16px;" id="windowclose">X</p>
+                <p style="cursor: pointer; padding: 4px; position: relative; top: -16px;" id="windowopen">O</p>
+            </div>
                 <div style="border: solid; border-radius: 8px; border-color: rgb(50, 50, 50); background-color: rgb(30, 30, 30); color: rgb(255, 255, 255); padding: 8px; margin: 8px;">
                     <H2>Warning</H2>
                     <p>All information about SCP OS (including the SCP OS) is <b>Classified</b></p>
@@ -23,10 +26,6 @@
         <!-- Desktop Apps -->
         <div id="desktopApps" style="padding-top:64px; padding-left: 0px;">
             <img src="./SCiPnetLogo.png" style="width: 32px; height: 32px;">
-            <p style="margin: 0; padding: 0; font-size: 11px;">SCiPnet</p>
-        </div>
-        <div class="selected" style="padding-top:64; padding-left: 0px;">
-            <img src="./SCiPnetLogo.png" style="width: 32px; height: 32px; filter:brightness(150%);">
             <p style="margin: 0; padding: 0; font-size: 11px;">SCiPnet</p>
         </div>
         <script src="script.js"></script>
