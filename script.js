@@ -63,7 +63,7 @@ function closeWindow(element) {
   element.style.display = "none"
 }
 function openWindow(element) {
-  element.style.display = "flex"
+  element.style.display = "block"
 }
 
 var welcomeScreenClose = document.querySelector("#windowclose");
