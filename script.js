@@ -58,12 +58,12 @@ function dragElement(element) {
   }
 }
 //welcome screen openning and closing
-var WelcomeScreen = document.querySelector("window")
+var WelcomeScreen = document.querySelector("#window")
 function closeWindow(element) {
   element.style.display = "none"
 }
 function openWindow(element) {
-  element.style.display = "block"
+  element.style.display = "flex"
 }
 
 var welcomeScreenClose = document.querySelector("#windowclose");
@@ -88,9 +88,9 @@ function deselectIcon(element) {
 }
 
 function handleIconTap(element) {
-  if (element.classlist.contains("selected")) {
+  if (element.classList.contains("selected")) {
     deselectIcon(element)
-    openWindow(window)
+    openWindow(WelcomeScreen)
   }else {
     selectIcon(element)
   }
