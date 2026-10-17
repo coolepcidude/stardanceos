@@ -4,8 +4,8 @@ setInterval(function updateTime() {
             }, 1000);
 
 // Make the DIV element draggable:
-dragElement(document.getElementById("window"));
-dragElement(document.getElementById("personnel"));
+dragElement(document.querySelector("#window"));
+dragElement(document.querySelector("#personnel"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
