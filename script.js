@@ -77,6 +77,9 @@ var personnelScreenClose = document.querySelector("#personnelclose");
 
 personnelScreenClose.addEventListener("click", () => closeWindow(personnelScreen));
 
+personnelScreenOpen.addEventListener("click", function() {
+  openWindow(personnelScreen);
+});
 
 welcomeScreenClose.addEventListener("click", function() {
   closeWindow(WelcomeScreen);
