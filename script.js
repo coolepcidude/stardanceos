@@ -65,6 +65,8 @@ function closeWindow(element) {
 }
 function openWindow(element) {
   element.style.display = "block"
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
 }
 
 var welcomeScreenClose = document.querySelector("#windowclose");
@@ -100,4 +102,17 @@ function handleIconTap(element) {
   }else {
     selectIcon(element)
   }
+}
+
+var biggestIndex = 1;
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  );
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
 }
