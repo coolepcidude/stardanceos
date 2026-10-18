@@ -73,6 +73,7 @@ var welcomeScreenClose = document.querySelector("#windowclose");
 var welcomeScreenOpen = document.querySelector("#windowopen");
 var personnelScreen = document.querySelector("#personnel");
 var personnelScreenOpen = document.querySelector("#personnelopen");
+var personnelScreenClose = document.querySelector("#personnelclose");
 
 personnelScreenClose.addEventListener("click", () => closeWindow(personnelScreen));
 
