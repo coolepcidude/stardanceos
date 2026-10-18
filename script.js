@@ -69,6 +69,8 @@ function openWindow(element) {
 
 var welcomeScreenClose = document.querySelector("#windowclose");
 var welcomeScreenOpen = document.querySelector("#windowopen");
+var personnelScreenClose = document.querySelector("#personnelclose");
+var personnelScreenOpen = document.querySelector("#personnelopen");
 
 welcomeScreenClose.addEventListener("click", function() {
   closeWindow(WelcomeScreen);
