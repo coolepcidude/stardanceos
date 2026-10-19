@@ -58,6 +58,8 @@ function dragElement(element) {
     document.onmousemove = null;
   }
 }
+var topBar = document.querySelector("#top");
+
 //welcome screen openning and closing
 var WelcomeScreen = document.querySelector("#window")
 function closeWindow(element) {
@@ -67,6 +69,7 @@ function openWindow(element) {
   element.style.display = "block"
   biggestIndex++;
   element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
 }
 
 var welcomeScreenClose = document.querySelector("#windowclose");
@@ -119,4 +122,6 @@ function addWindowTapHandling(element) {
 function handleWindowTap(element) {
   biggestIndex++;
   element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+  deselectIcon(selectedIcon);
 }
