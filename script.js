@@ -125,3 +125,30 @@ function handleWindowTap(element) {
   topBar.style.zIndex = biggestIndex + 1;
   deselectIcon(selectedIcon);
 }
+
+var content = [
+  {
+    title: "05-1",
+    content: `
+    <div style="border: solid">
+            <p>O5-1</p>
+            <p>Position: [REDACTED]</p>
+            <p>Clearance Level: 5</p>
+            <p>Description: [REDACTED] of the SCP foundation. Well known for [REDACTED] and [REDACTED]. [DATA EXPUNGED]. Possibly capable of [DATA EXPUNGED] other then SCP-006.</p>
+    </div>
+    `
+  }
+]
+
+function setNotesContent(index) {
+ var notesContent = document.querySelector("#notescontent");
+ notesContent.innerHTML = content[index].content
+}
+
+setNotesContent(0);
+
+function addToSideBar(index) {
+  var sidebar = document.querySelector('#sidebar');
+  var personnel = content[index];
+  var newDiv = document.createElement('div')
+}
